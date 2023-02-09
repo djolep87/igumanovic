@@ -99,18 +99,65 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth"" href="#">
+            <a class="nav-link" href="admin.seca_reka">
               <i class="icon-help menu-icon"></i>
-              <span class="menu-title">Школе</span>
-              <i class="menu-arrow"></i>
+              <span class="menu-title">Сеча река</span>
             </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <a class="nav-link" href="admin.seca_reka">Сеча река</a>
-              </li>
-              </ul>
-            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.razana">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Ражана</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.drenovci">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Дреновци</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.zarici">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Зарићи</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="admin.musici">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Мушићи</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.skakavci">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Скакавци</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.tubici">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Тубићи</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.brajkovici">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Брајковићи</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.paramun">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Парамун</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.radanovci">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Радановци</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">

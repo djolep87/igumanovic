@@ -6,6 +6,7 @@ use App\Models\Galerija;
 use App\Models\Letopis;
 use App\Models\Pedagog;
 use App\Models\Psiholog;
+use App\Models\Razana;
 use App\Models\SavetRoditelja;
 use App\Models\SecaReka;
 use App\Models\Takmicenja;
@@ -41,6 +42,12 @@ class PagesController extends Controller
     {
         $posts = SecaReka::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.seca_reka', compact('posts'));
+    }
+
+    public function razana()
+    {
+        $posts = Razana::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.razana', compact('posts'));
     }
 
     public function dokumenta()

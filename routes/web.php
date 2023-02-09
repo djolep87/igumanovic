@@ -29,6 +29,7 @@ Route::get('/letopis', 'PagesController@letopis');
 Route::get('/galerija', 'PagesController@galerija');
 Route::get('/vesti', 'PagesController@vesti');
 Route::get('/seca_reka', 'PagesController@seca_reka');
+Route::get('/razana', 'PagesController@razana');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -160,6 +161,15 @@ Route::get('/admin.seca_reka.edit/{id}', 'SecaRekaController@edit');
 Route::put('/admin.seca_reka/{posts}', 'SecaRekaController@update');
 Route::delete('/admin.seca_reka.destroy/{id}', 'SecaRekaController@destroy');
 Route::post('/upload', 'SecaRekaController@uploadImage')->name('upload');
+
+Route::get('/admin.razana', 'RazanaController@index');
+Route::get('/admin.razana.create', 'RazanaController@create');
+Route::post('/admin.razana.store', 'RazanaController@store');
+Route::get('/admin.razana.show/{id}', 'RazanaController@show');
+Route::get('/admin.razana.edit/{id}', 'RazanaController@edit');
+Route::put('/admin.razana/{posts}', 'RazanaController@update');
+Route::delete('/admin.razana.destroy/{id}', 'RazanaController@destroy');
+Route::post('/upload', 'RazanaController@uploadImage')->name('upload');
 
 
 Auth::routes();

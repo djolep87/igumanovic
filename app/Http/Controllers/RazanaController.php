@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SecaReka;
+use App\Models\Razana;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
-class SecaRekaController extends Controller
+class RazanaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class SecaRekaController extends Controller
      */
     public function index()
     {
-        
-        $posts = SecaReka::OrderBy('created_at', 'desc')->get();
-        return view('admin.skole.seca_reka.index', compact('posts'));
+        $posts = Razana::OrderBy('created_at', 'desc')->get();
+        return view('admin.skole.razana.index', compact('posts'));
     }
 
     /**
@@ -27,7 +26,7 @@ class SecaRekaController extends Controller
      */
     public function create()
     {
-        return view('admin.skole.seca_reka.create');
+        return view('admin.skole.razana.create');
     }
 
     /**
@@ -52,13 +51,13 @@ class SecaRekaController extends Controller
         }
 
 
-        $posts = new SecaReka();
+        $posts = new Razana();
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');
         $posts->save();
 
-        return redirect('admin.seca_reka');
+        return redirect('admin.razana');
     }
 
     public function uploadImage(Request $request)
@@ -81,37 +80,37 @@ class SecaRekaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\SecaReka  $secaReka
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $post = SecaReka::find($id);
-        return view('admin.skole.seca_reka.show')->with('post', $post);
+        $post = Razana::find($id);
+        return view('admin.skole.razana.show')->with('post', $post);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\SecaReka  $secaReka
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $post = SecaReka::find($id);
-        return view('admin.skole.seca_reka.edit', compact('post'));
+        $post = Razana::find($id);
+        return view('admin.skole.razana.edit', compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\SecaReka  $secaReka
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $post = SecaReka::find($id);
+        $post = Razana::find($id);
 
         if ($request->hasFile('image')) {
 
@@ -152,19 +151,19 @@ class SecaRekaController extends Controller
         $post->body = $request->input('body');
         $post->save();
 
-        return redirect('admin.seca_reka');
+        return redirect('admin.razana');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\SecaReka  $secaReka
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $post = SecaReka::find($id);
+        $post = Razana::find($id);
         $post->delete();
-        return redirect('admin.seca_reka');
+        return redirect('admin.razana');
     }
 }

@@ -54,6 +54,14 @@
                                                     <li class="inner-menu-item current-item"><a href="#">Школе</a>
                                                         <ul class="sub-menu">
                                                             <li><a href="/seca_reka">Сеча Река</a></li>
+                                                            <li><a href="/razana">Ражана</a></li>
+                                                            <li><a href="/drenovci">Дреновци</a></li>
+                                                            <li><a href="/zarici">Зарићи</a></li>
+                                                            <li><a href="/musici">Мушићи</a></li>
+                                                            <li><a href="/skakavci">Скакавци</a></li>
+                                                            <li><a href="/tubici">Тубићи</a></li>
+                                                            <li><a href="/brajkovici">Брајковићи</a></li>
+                                                            <li><a href="/radanovci">Радановци</a></li>
                                                             <li><a href="/paramun">Парамун</a></li>
                                                         </ul>
                                                     </li>
