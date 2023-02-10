@@ -14,6 +14,7 @@ use App\Models\Takmicenja;
 use App\Models\UceniciGeneracija;
 use App\Models\UpisPrvaka;
 use App\Models\Vesti;
+use App\Models\Zarici;
 use App\Models\ZavrsniIspit;
 use Illuminate\Http\Request;
 

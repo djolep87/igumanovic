@@ -31,6 +31,7 @@ Route::get('/vesti', 'PagesController@vesti');
 Route::get('/seca_reka', 'PagesController@seca_reka');
 Route::get('/razana', 'PagesController@razana');
 Route::get('/drenovci', 'PagesController@drenovci');
+Route::get('/zarici', 'PagesController@zarici');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -180,6 +181,15 @@ Route::get('/admin.drenovci.edit/{id}', 'DrenovciController@edit');
 Route::put('/admin.drenovci/{posts}', 'DrenovciController@update');
 Route::delete('/admin.drenovci.destroy/{id}', 'DrenovciController@destroy');
 Route::post('/upload', 'DrenovciController@uploadImage')->name('upload');
+
+Route::get('/admin.zarici', 'ZariciController@index');
+Route::get('/admin.zarici.create', 'ZariciController@create');
+Route::post('/admin.zarici.store', 'ZariciController@store');
+Route::get('/admin.zarici.show/{id}', 'ZariciController@show');
+Route::get('/admin.zarici.edit/{id}', 'ZariciController@edit');
+Route::put('/admin.zarici/{posts}', 'ZariciController@update');
+Route::delete('/admin.zarici.destroy/{id}', 'ZariciController@destroy');
+Route::post('/upload', 'ZariciController@uploadImage')->name('upload');
 
 
 Auth::routes();

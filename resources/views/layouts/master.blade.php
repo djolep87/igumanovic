@@ -51,7 +51,7 @@
                                                 <a href="#">О школи</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="/istorijat">Историјат</a></li>
-                                                    <li class="inner-menu-item current-item"><a href="#">Школе</a>
+                                                    <li class="inner-menu-item current-item"><a href="#">Издвојена одељења</a>
                                                         <ul class="sub-menu">
                                                             <li><a href="/seca_reka">Сеча Река</a></li>
                                                             <li><a href="/razana">Ражана</a></li>
