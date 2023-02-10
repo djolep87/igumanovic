@@ -30,6 +30,7 @@ Route::get('/galerija', 'PagesController@galerija');
 Route::get('/vesti', 'PagesController@vesti');
 Route::get('/seca_reka', 'PagesController@seca_reka');
 Route::get('/razana', 'PagesController@razana');
+Route::get('/drenovci', 'PagesController@drenovci');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -170,6 +171,15 @@ Route::get('/admin.razana.edit/{id}', 'RazanaController@edit');
 Route::put('/admin.razana/{posts}', 'RazanaController@update');
 Route::delete('/admin.razana.destroy/{id}', 'RazanaController@destroy');
 Route::post('/upload', 'RazanaController@uploadImage')->name('upload');
+
+Route::get('/admin.drenovci', 'DrenovciController@index');
+Route::get('/admin.drenovci.create', 'DrenovciController@create');
+Route::post('/admin.drenovci.store', 'DrenovciController@store');
+Route::get('/admin.drenovci.show/{id}', 'DrenovciController@show');
+Route::get('/admin.drenovci.edit/{id}', 'DrenovciController@edit');
+Route::put('/admin.drenovci/{posts}', 'DrenovciController@update');
+Route::delete('/admin.drenovci.destroy/{id}', 'DrenovciController@destroy');
+Route::post('/upload', 'DrenovciController@uploadImage')->name('upload');
 
 
 Auth::routes();

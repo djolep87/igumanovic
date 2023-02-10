@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Drenovci;
 use App\Models\Galerija;
 use App\Models\Letopis;
 use App\Models\Pedagog;
@@ -48,6 +49,18 @@ class PagesController extends Controller
     {
         $posts = Razana::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.razana', compact('posts'));
+    }
+
+    public function drenovci()
+    {
+        $posts = Drenovci::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.drenovci', compact('posts'));
+    }
+
+    public function zarici()
+    {
+        $posts = Zarici::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.zarici', compact('posts'));
     }
 
     public function dokumenta()
