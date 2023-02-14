@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Drenovci;
 use App\Models\Galerija;
 use App\Models\Letopis;
+use App\Models\Musici;
 use App\Models\Pedagog;
 use App\Models\Psiholog;
 use App\Models\Razana;
@@ -62,6 +63,12 @@ class PagesController extends Controller
     {
         $posts = Zarici::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.zarici', compact('posts'));
+    }
+
+    public function musici()
+    {
+        $posts = Musici::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.musici', compact('posts'));
     }
 
     public function dokumenta()

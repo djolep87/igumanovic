@@ -32,6 +32,7 @@ Route::get('/seca_reka', 'PagesController@seca_reka');
 Route::get('/razana', 'PagesController@razana');
 Route::get('/drenovci', 'PagesController@drenovci');
 Route::get('/zarici', 'PagesController@zarici');
+Route::get('/musici', 'PagesController@musici');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -190,6 +191,15 @@ Route::get('/admin.zarici.edit/{id}', 'ZariciController@edit');
 Route::put('/admin.zarici/{posts}', 'ZariciController@update');
 Route::delete('/admin.zarici.destroy/{id}', 'ZariciController@destroy');
 Route::post('/upload', 'ZariciController@uploadImage')->name('upload');
+
+Route::get('/admin.musici', 'MusiciController@index');
+Route::get('/admin.musici.create', 'MusiciController@create');
+Route::post('/admin.musici.store', 'MusiciController@store');
+Route::get('/admin.musici.show/{id}', 'MusiciController@show');
+Route::get('/admin.musici.edit/{id}', 'MusiciController@edit');
+Route::put('/admin.musici/{posts}', 'MusiciController@update');
+Route::delete('/admin.musici.destroy/{id}', 'MusiciController@destroy');
+Route::post('/upload', 'MusiciController@uploadImage')->name('upload');
 
 
 Auth::routes();
