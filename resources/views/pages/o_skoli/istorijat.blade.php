@@ -223,7 +223,7 @@
                                 </svg>
                             </div>
                              <div class="box-content">
-                                <h4 class="title">Тубићи</h4>
+                                <a href="/tubici"><h4 class="title">Тубићи</h4></a>
                                 <p class="wrap f-mulish">31260 Косјерић, 031/783 422</p>
                                 <a href="events.html" class="fl-btn st-13">
                                 </a>

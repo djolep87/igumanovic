@@ -13,6 +13,7 @@ use App\Models\SavetRoditelja;
 use App\Models\SecaReka;
 use App\Models\Skakavci;
 use App\Models\Takmicenja;
+use App\Models\Tubici;
 use App\Models\UceniciGeneracija;
 use App\Models\UpisPrvaka;
 use App\Models\Vesti;
@@ -76,6 +77,12 @@ class PagesController extends Controller
     {
         $posts = Skakavci::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.skakavci', compact('posts'));
+    }
+
+    public function tubici()
+    {
+        $posts = Tubici::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.tubici', compact('posts'));
     }
 
     public function dokumenta()

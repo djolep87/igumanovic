@@ -34,6 +34,7 @@ Route::get('/drenovci', 'PagesController@drenovci');
 Route::get('/zarici', 'PagesController@zarici');
 Route::get('/musici', 'PagesController@musici');
 Route::get('/skakavci', 'PagesController@skakavci');
+Route::get('/tubici', 'PagesController@tubici');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -210,6 +211,15 @@ Route::get('/admin.skakavci.edit/{id}', 'SkakavciController@edit');
 Route::put('/admin.skakavci/{posts}', 'SkakavciController@update');
 Route::delete('/admin.skakavci.destroy/{id}', 'SkakavciController@destroy');
 Route::post('/upload', 'SkakavciController@uploadImage')->name('upload');
+
+Route::get('/admin.tubici', 'TubiciController@index');
+Route::get('/admin.tubici.create', 'TubiciController@create');
+Route::post('/admin.tubici.store', 'TubiciController@store');
+Route::get('/admin.tubici.show/{id}', 'TubiciController@show');
+Route::get('/admin.tubici.edit/{id}', 'TubiciController@edit');
+Route::put('/admin.tubici/{posts}', 'TubiciController@update');
+Route::delete('/admin.tubici.destroy/{id}', 'TubiciController@destroy');
+Route::post('/upload', 'TubiciController@uploadImage')->name('upload');
 
 
 Auth::routes();
