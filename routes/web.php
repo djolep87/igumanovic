@@ -33,6 +33,7 @@ Route::get('/razana', 'PagesController@razana');
 Route::get('/drenovci', 'PagesController@drenovci');
 Route::get('/zarici', 'PagesController@zarici');
 Route::get('/musici', 'PagesController@musici');
+Route::get('/skakavci', 'PagesController@skakavci');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -200,6 +201,15 @@ Route::get('/admin.musici.edit/{id}', 'MusiciController@edit');
 Route::put('/admin.musici/{posts}', 'MusiciController@update');
 Route::delete('/admin.musici.destroy/{id}', 'MusiciController@destroy');
 Route::post('/upload', 'MusiciController@uploadImage')->name('upload');
+
+Route::get('/admin.skakavci', 'SkakavciController@index');
+Route::get('/admin.skakavci.create', 'SkakavciController@create');
+Route::post('/admin.skakavci.store', 'SkakavciController@store');
+Route::get('/admin.skakavci.show/{id}', 'SkakavciController@show');
+Route::get('/admin.skakavci.edit/{id}', 'SkakavciController@edit');
+Route::put('/admin.skakavci/{posts}', 'SkakavciController@update');
+Route::delete('/admin.skakavci.destroy/{id}', 'SkakavciController@destroy');
+Route::post('/upload', 'SkakavciController@uploadImage')->name('upload');
 
 
 Auth::routes();

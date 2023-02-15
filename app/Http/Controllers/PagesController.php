@@ -11,6 +11,7 @@ use App\Models\Psiholog;
 use App\Models\Razana;
 use App\Models\SavetRoditelja;
 use App\Models\SecaReka;
+use App\Models\Skakavci;
 use App\Models\Takmicenja;
 use App\Models\UceniciGeneracija;
 use App\Models\UpisPrvaka;
@@ -69,6 +70,12 @@ class PagesController extends Controller
     {
         $posts = Musici::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.musici', compact('posts'));
+    }
+
+    public function skakavci()
+    {
+        $posts = Skakavci::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.skakavci', compact('posts'));
     }
 
     public function dokumenta()

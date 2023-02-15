@@ -120,7 +120,7 @@
                                 </svg>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Ражана</h4>
+                                <a href="/razana"><h4 class="title">Ражана</h4></a>
                                 <p class="wrap f-mulish">31265 Ражана, 031/880 197</p>
                                 <a href="classes.html" class="fl-btn st-13">
                                 </a>
@@ -150,7 +150,7 @@
                                 </svg>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Дреновци</h4>
+                                <a href="/drenovci"><h4 class="title">Дреновци</h4></a>
                                 <p class="wrap f-mulish">31265 Ражана, 031/880 353</p>
                                 <a href="teacher.html" class="fl-btn st-13">
                                 </a>
@@ -163,7 +163,7 @@
                                 <a href="/zarici"><img src="/assets/images/skole/zarici.jpg" width="110" height="107" alt="" ></a>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Зарићи</h4>
+                                <a href="/zarici"><h4 class="title">Зарићи</h4></a>
                                 <p class="wrap f-mulish">31262 Сеча Река, 063/109 47 94</p>
                                 <a href="teacher.html" class="fl-btn st-13">
                                 </a>
@@ -180,7 +180,7 @@
                                 </svg>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Мушићи</a>
+                                <a href="/musici"><h4 class="title">Мушићи</h4></a>
                                 <p class="wrap f-mulish">31260 Косјерић, 031/886 173 и 063/109 47 92</p>
                                 <a href="teacher.html" class="fl-btn st-13">
                                 </a>
@@ -205,7 +205,7 @@
                                 </svg>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Скакавци</h4>
+                                <a href="/skakavci"><h4 class="title">Скакавци</h4></a>
                                 <p class="wrap f-mulish">31265 Ражана, 031/880 149</p>
                                 <a href="program.html" class="fl-btn st-13">
                                 </a>
