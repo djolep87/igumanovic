@@ -36,6 +36,7 @@ Route::get('/musici', 'PagesController@musici');
 Route::get('/skakavci', 'PagesController@skakavci');
 Route::get('/tubici', 'PagesController@tubici');
 Route::get('/brajkovici', 'PagesController@brajkovici');
+Route::get('/paramun', 'PagesController@paramun');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -230,6 +231,15 @@ Route::get('/admin.brajkovici.edit/{id}', 'BrajkoviciController@edit');
 Route::put('/admin.brajkovici/{posts}', 'BrajkoviciController@update');
 Route::delete('/admin.brajkovici.destroy/{id}', 'BrajkoviciController@destroy');
 Route::post('/upload', 'BrajkoviciController@uploadImage')->name('upload');
+
+Route::get('/admin.paramun', 'ParamunController@index');
+Route::get('/admin.paramun.create', 'ParamunController@create');
+Route::post('/admin.paramun.store', 'ParamunController@store');
+Route::get('/admin.paramun.show/{id}', 'ParamunController@show');
+Route::get('/admin.paramun.edit/{id}', 'ParamunController@edit');
+Route::put('/admin.paramun/{posts}', 'ParamunController@update');
+Route::delete('/admin.paramun.destroy/{id}', 'ParamunController@destroy');
+Route::post('/upload', 'ParamunController@uploadImage')->name('upload');
 
 
 Auth::routes();

@@ -240,7 +240,7 @@
                                 </svg>
                             </div>
                     <div class="box-content">
-                                <h4 class="title">Брајковићи</h4>
+                                <a href="/brajkovici"><h4 class="title">Брајковићи</h4></a>
                                 <p class="wrap f-mulish">31260 Косјерић, 031/781 791</p>
                                 <a href="events.html" class="fl-btn st-13">
                                 </a>
@@ -257,7 +257,7 @@
                                 </svg>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Парамун</h4>
+                                <a href="/paramun"><h4 class="title">Парамун</h4></a>
                                 <p class="wrap f-mulish">31262 Сеча Река, 031/788 616</p>
                                 <a href="events.html" class="fl-btn st-13">
                                 </a>
@@ -274,7 +274,7 @@
                                 </svg>
                             </div>
                             <div class="box-content">
-                                <h4 class="title">Радановци</h4>
+                                <a href="/radanovci"><h4 class="title">Радановци</h4></a>
                                 <p class="wrap f-mulish">31265 Ражана, 031/580 444</p>
                                 <a href="classes.html" class="fl-btn st-13">
                                 </a>

@@ -7,6 +7,7 @@ use App\Models\Drenovci;
 use App\Models\Galerija;
 use App\Models\Letopis;
 use App\Models\Musici;
+use App\Models\Paramun;
 use App\Models\Pedagog;
 use App\Models\Psiholog;
 use App\Models\Razana;
@@ -90,6 +91,12 @@ class PagesController extends Controller
     {
         $posts = Brajkovici::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.brajkovici', compact('posts'));
+    }
+
+    public function paramun()
+    {
+        $posts = Paramun::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.paramun', compact('posts'));
     }
 
     public function dokumenta()
