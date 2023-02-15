@@ -35,6 +35,7 @@ Route::get('/zarici', 'PagesController@zarici');
 Route::get('/musici', 'PagesController@musici');
 Route::get('/skakavci', 'PagesController@skakavci');
 Route::get('/tubici', 'PagesController@tubici');
+Route::get('/brajkovici', 'PagesController@brajkovici');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -220,6 +221,15 @@ Route::get('/admin.tubici.edit/{id}', 'TubiciController@edit');
 Route::put('/admin.tubici/{posts}', 'TubiciController@update');
 Route::delete('/admin.tubici.destroy/{id}', 'TubiciController@destroy');
 Route::post('/upload', 'TubiciController@uploadImage')->name('upload');
+
+Route::get('/admin.brajkovici', 'BrajkoviciController@index');
+Route::get('/admin.brajkovici.create', 'BrajkoviciController@create');
+Route::post('/admin.brajkovici.store', 'BrajkoviciController@store');
+Route::get('/admin.brajkovici.show/{id}', 'BrajkoviciController@show');
+Route::get('/admin.brajkovici.edit/{id}', 'BrajkoviciController@edit');
+Route::put('/admin.brajkovici/{posts}', 'BrajkoviciController@update');
+Route::delete('/admin.brajkovici.destroy/{id}', 'BrajkoviciController@destroy');
+Route::post('/upload', 'BrajkoviciController@uploadImage')->name('upload');
 
 
 Auth::routes();

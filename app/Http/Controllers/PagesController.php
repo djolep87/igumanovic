@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brajkovici;
 use App\Models\Drenovci;
 use App\Models\Galerija;
 use App\Models\Letopis;
@@ -83,6 +84,12 @@ class PagesController extends Controller
     {
         $posts = Tubici::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.tubici', compact('posts'));
+    }
+
+    public function brajkovici()
+    {
+        $posts = Brajkovici::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.brajkovici', compact('posts'));
     }
 
     public function dokumenta()
