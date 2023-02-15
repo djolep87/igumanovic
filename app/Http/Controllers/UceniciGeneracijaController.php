@@ -56,7 +56,7 @@ class UceniciGeneracijaController extends Controller
         }
 
 
-        $posts = new UceniciGeneracija();
+        $posts = new UceniciGeneracija;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');

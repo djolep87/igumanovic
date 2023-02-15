@@ -57,7 +57,7 @@ class PsihologController extends Controller
         }
 
 
-        $posts = new Psiholog();
+        $posts = new Psiholog;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');

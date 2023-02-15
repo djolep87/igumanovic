@@ -37,6 +37,7 @@ Route::get('/skakavci', 'PagesController@skakavci');
 Route::get('/tubici', 'PagesController@tubici');
 Route::get('/brajkovici', 'PagesController@brajkovici');
 Route::get('/paramun', 'PagesController@paramun');
+Route::get('/radanovci', 'PagesController@radanovci');
 Route::get('/termini', 'PagesController@termini');
 
 Route::get('/kalendar', 'PagesController@kalendar');
@@ -240,6 +241,15 @@ Route::get('/admin.paramun.edit/{id}', 'ParamunController@edit');
 Route::put('/admin.paramun/{posts}', 'ParamunController@update');
 Route::delete('/admin.paramun.destroy/{id}', 'ParamunController@destroy');
 Route::post('/upload', 'ParamunController@uploadImage')->name('upload');
+
+Route::get('/admin.radanovci', 'RadanovciController@index');
+Route::get('/admin.radanovci.create', 'RadanovciController@create');
+Route::post('/admin.radanovci.store', 'RadanovciController@store');
+Route::get('/admin.radanovci.show/{id}', 'RadanovciController@show');
+Route::get('/admin.radanovci.edit/{id}', 'RadanovciController@edit');
+Route::put('/admin.radanovci/{posts}', 'RadanovciController@update');
+Route::delete('/admin.radanovci.destroy/{id}', 'RadanovciController@destroy');
+Route::post('/upload', 'RadanovciController@uploadImage')->name('upload');
 
 
 Auth::routes();

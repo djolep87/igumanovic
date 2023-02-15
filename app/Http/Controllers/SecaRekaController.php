@@ -52,7 +52,7 @@ class SecaRekaController extends Controller
         }
 
 
-        $posts = new SecaReka();
+        $posts = new SecaReka;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');

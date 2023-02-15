@@ -51,7 +51,7 @@ class DrenovciController extends Controller
         }
 
 
-        $posts = new Drenovci();
+        $posts = new Drenovci;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');

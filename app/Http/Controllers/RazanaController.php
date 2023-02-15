@@ -51,7 +51,7 @@ class RazanaController extends Controller
         }
 
 
-        $posts = new Razana();
+        $posts = new Razana;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');

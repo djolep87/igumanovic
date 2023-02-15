@@ -10,6 +10,7 @@ use App\Models\Musici;
 use App\Models\Paramun;
 use App\Models\Pedagog;
 use App\Models\Psiholog;
+use App\Models\Radanovci;
 use App\Models\Razana;
 use App\Models\SavetRoditelja;
 use App\Models\SecaReka;
@@ -97,6 +98,12 @@ class PagesController extends Controller
     {
         $posts = Paramun::OrderBy('created_at', 'desc')->get();
         return view('pages.o_skoli.paramun', compact('posts'));
+    }
+
+    public function radanovci()
+    {
+        $posts = Radanovci::OrderBy('created_at', 'desc')->get();
+        return view('pages.o_skoli.radanovci', compact('posts'));
     }
 
     public function dokumenta()

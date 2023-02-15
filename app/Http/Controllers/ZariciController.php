@@ -51,7 +51,7 @@ class ZariciController extends Controller
         }
 
 
-        $posts = new Zarici();
+        $posts = new Zarici;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');

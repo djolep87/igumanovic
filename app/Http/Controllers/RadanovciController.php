@@ -2,26 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pedagog;
-use Illuminate\Http\Request;
+use App\Models\Radanovci;
 use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 
-class PedagogController extends Controller
+class RadanovciController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth', ['except' => ['show']]);
-    }
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $posts = Pedagog::OrderBy('created_at', 'desc')->get();
-        return view('admin.pedagog.index', compact('posts'));
+        $posts = Radanovci::OrderBy('created_at', 'desc')->get();
+        return view('admin.skole.radanovci.index', compact('posts'));
     }
 
     /**
@@ -31,7 +26,7 @@ class PedagogController extends Controller
      */
     public function create()
     {
-        return view('admin.pedagog.create');
+        return view('admin.skole.radanovci.create');
     }
 
     /**
@@ -42,28 +37,27 @@ class PedagogController extends Controller
      */
     public function store(Request $request)
     {
-        
         if ($request->hasFile('image')) {
-        $filenameWithExt = $request->file('image')->getClientOriginalName();
-        //Get just filename
-        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-        //Get just extension
-        $extension = $request->file('image')->getClientOriginalExtension();
-        //Filename to store
-        $fileNameToStore = $filename . '_' . time() . '.' . $extension;
-        $path = $request->file('image')->storeAs('public/post_image', $fileNameToStore);
-    } else {
-        $fileNameToStore = 'noimage.jpg';
-    }
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+            //Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //Get just extension
+            $extension = $request->file('image')->getClientOriginalExtension();
+            //Filename to store
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('image')->storeAs('public/post_image', $fileNameToStore);
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
 
 
-        $posts = new Pedagog;
+        $posts = new Radanovci;
         $posts->title = $request->input('title');
         $posts->image = $fileNameToStore;
         $posts->body = $request->input('body');
         $posts->save();
 
-        return redirect('admin.pedagog');
+        return redirect('admin.radanovci');
     }
 
     public function uploadImage(Request $request)
@@ -91,8 +85,8 @@ class PedagogController extends Controller
      */
     public function show($id)
     {
-        $post = Pedagog::find($id);
-        return view('admin.pedagog.show', compact('post'));
+        $post = Radanovci::find($id);
+        return view('admin.skole.radanovci.show')->with('post', $post);
     }
 
     /**
@@ -103,8 +97,8 @@ class PedagogController extends Controller
      */
     public function edit($id)
     {
-        $post = Pedagog::find($id);
-        return view('admin.pedagog.edit', compact('post'));
+        $post = Radanovci::find($id);
+        return view('admin.skole.radanovci.edit', compact('post'));
     }
 
     /**
@@ -116,8 +110,7 @@ class PedagogController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-        $post = Pedagog::find($id);
+        $post = Radanovci::find($id);
 
         if ($request->hasFile('image')) {
 
@@ -138,7 +131,6 @@ class PedagogController extends Controller
         }
 
 
-
         if ($request->hasFile('upload')) {
             $originName = $request->file('upload')->getClientOriginalName();
             //Get just filename
@@ -153,13 +145,13 @@ class PedagogController extends Controller
             return response()->json(['filename' => $fileName, 'uploaded' => 1, 'url' => $url]);
         }
 
-
         
         $post->title = $request->input('title');
+        $post->image = $fileNameToStore;
         $post->body = $request->input('body');
         $post->save();
 
-        return redirect('admin.pedagog');
+        return redirect('admin.radanovci');
     }
 
     /**
@@ -170,8 +162,8 @@ class PedagogController extends Controller
      */
     public function destroy($id)
     {
-        $post = Pedagog::find($id);
+        $post = Radanovci::find($id);
         $post->delete();
-        return redirect('admin.pedagog');
+        return redirect('admin.radanovci');
     }
 }
