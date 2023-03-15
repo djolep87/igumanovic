@@ -9,6 +9,7 @@ use App\Models\Letopis;
 use App\Models\Musici;
 use App\Models\Paramun;
 use App\Models\Pedagog;
+use App\Models\ProjektnaNastava;
 use App\Models\Psiholog;
 use App\Models\Radanovci;
 use App\Models\Razana;
@@ -178,6 +179,12 @@ class PagesController extends Controller
     public function raspored()
     {
         return view('pages.organizacija_rada.raspored');
+    }
+
+    public function projektna_nastava()
+    {
+        $posts = ProjektnaNastava::orderBy('created_at', 'desc')->get();
+        return view('pages.organizacija_rada.projektna_nastava', compact('posts'));
     }
 
     public function vannastavne_aktivnosti()

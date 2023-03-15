@@ -46,6 +46,7 @@ Route::get('/jednosmenski', 'PagesController@jednosmenski');
 Route::get('/raspored', 'PagesController@raspored');
 Route::get('/rasporedimr', 'PagesController@rasporedimr');
 Route::get('/rasporedisr', 'PagesController@rasporedisr');
+Route::get('/projektna_nastava', 'PagesController@projektna_nastava');
 Route::get('/vannastavne_aktivnosti', 'PagesController@vannastavne_aktivnosti');
 Route::get('/produzeni_boravak', 'PagesController@produzeni_boravak');
 
@@ -250,6 +251,15 @@ Route::get('/admin.radanovci.edit/{id}', 'RadanovciController@edit');
 Route::put('/admin.radanovci/{posts}', 'RadanovciController@update');
 Route::delete('/admin.radanovci.destroy/{id}', 'RadanovciController@destroy');
 Route::post('/upload', 'RadanovciController@uploadImage')->name('upload');
+
+Route::get('/admin.projektna_nastava', 'ProjektnaNastavaController@index');
+Route::get('/admin.projektna_nastava.create', 'ProjektnaNastavaController@create');
+Route::post('/admin.projektna_nastava.store', 'ProjektnaNastavaController@store');
+Route::get('/admin.projektna_nastava.show/{id}', 'ProjektnaNastavaController@show');
+Route::get('/admin.projektna_nastava.edit/{id}', 'ProjektnaNastavaController@edit');
+Route::put('/admin.projektna_nastava/{posts}', 'ProjektnaNastavaController@update');
+Route::delete('/admin.projektna_nastava.destroy/{id}', 'ProjektnaNastavaController@destroy');
+Route::post('/upload', 'ProjektnaNastavaController@uploadImage')->name('upload');
 
 
 Auth::routes();

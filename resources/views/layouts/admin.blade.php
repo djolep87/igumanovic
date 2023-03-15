@@ -81,6 +81,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="admin.projektna_nastava">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Пројектна настава</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/admin.psiholog">
               <i class="icon-help menu-icon"></i>
               <span class="menu-title">Психолог</span>
