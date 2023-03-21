@@ -47,7 +47,7 @@ Route::get('/raspored', 'PagesController@raspored');
 Route::get('/rasporedimr', 'PagesController@rasporedimr');
 Route::get('/rasporedisr', 'PagesController@rasporedisr');
 Route::get('/projektna_nastava', 'PagesController@projektna_nastava');
-Route::get('/vannastavne_aktivnosti', 'PagesController@vannastavne_aktivnosti');
+Route::get('/vannastavne', 'PagesController@vannastavne');
 Route::get('/produzeni_boravak', 'PagesController@produzeni_boravak');
 
 
@@ -260,6 +260,16 @@ Route::get('/admin.projektna_nastava.edit/{id}', 'ProjektnaNastavaController@edi
 Route::put('/admin.projektna_nastava/{posts}', 'ProjektnaNastavaController@update');
 Route::delete('/admin.projektna_nastava.destroy/{id}', 'ProjektnaNastavaController@destroy');
 Route::post('/upload', 'ProjektnaNastavaController@uploadImage')->name('upload');
+
+Route::get('/admin.vannastavne', 'VannastavneController@index');
+Route::get('/admin.vannastavne.create', 'VannastavneController@create');
+Route::post('/admin.vannastavne.store', 'VannastavneController@store');
+Route::get('/admin.vannastavne.show/{id}', 'VannastavneController@show');
+Route::get('/admin.vannastavne.edit/{id}', 'VannastavneController@edit');
+Route::put('/admin.vannastavne/{posts}', 'VannastavneController@update');
+Route::delete('/admin.vannastavne.destroy/{id}', 'VannastavneController@destroy');
+Route::post('/upload', 'VannastavneController@uploadImage')->name('upload');
+
 
 
 Auth::routes();

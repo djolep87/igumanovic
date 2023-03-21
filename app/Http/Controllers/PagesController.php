@@ -20,6 +20,7 @@ use App\Models\Takmicenja;
 use App\Models\Tubici;
 use App\Models\UceniciGeneracija;
 use App\Models\UpisPrvaka;
+use App\Models\Vannastavne;
 use App\Models\Vesti;
 use App\Models\Zarici;
 use App\Models\ZavrsniIspit;
@@ -187,9 +188,10 @@ class PagesController extends Controller
         return view('pages.organizacija_rada.projektna_nastava', compact('posts'));
     }
 
-    public function vannastavne_aktivnosti()
+    public function vannastavne()
     {
-        return view('pages.organizacija_rada.vannastavne_aktivnosti');
+        $posts = Vannastavne::orderBy('created_at', 'desc')->get();
+        return view('pages.organizacija_rada.vannastavne', compact('posts'));
     }
 
     public function produzeni_boravak()

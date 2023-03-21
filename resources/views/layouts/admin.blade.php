@@ -87,6 +87,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="admin.vannastavne">
+              <i class="icon-help menu-icon"></i>
+              <span class="menu-title">Ваннаставне активности</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/admin.psiholog">
               <i class="icon-help menu-icon"></i>
               <span class="menu-title">Психолог</span>
