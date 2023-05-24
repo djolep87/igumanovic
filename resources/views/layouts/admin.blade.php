@@ -65,7 +65,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/admin.nasi_radovi">
               <i class="icon-pie-graph menu-icon"></i>
-              <span class="menu-title">Naši radovi</span>
+              <span class="menu-title">Наши радови</span>
             </a>
           </li>
           <li class="nav-item">

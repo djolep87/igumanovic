@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Измена naši radovi')
+@section('title', 'Измена наши радови')
 
 
 @section('content')
 <div class="col-12 grid-margin stretch-card" id="container">
     <div class="card">
       <div class="card-body">
-        <h3 class="card-title">Naši raovi</h3>
+        <h3 class="card-title">Наши радови</h3>
         <p class="card-description">
           
         </p>

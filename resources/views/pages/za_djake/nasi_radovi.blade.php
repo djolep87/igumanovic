@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Naši radovi')
+@section('title', 'Наши радови')
 
 @section('content')
 <section class="tf-page-title">
@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title inner">
-                    <h1 class="title">Naši radovi</h1>
+                    <h1 class="title">Наши радови</h1>
                     <div class="breadcrumbs">
                         <ul class="jus-ct">
                             <li><a href="/">Почетна</a></li>

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Админ Naši radovi')
+@section('title', 'Админ наши радови')
 
 @section('content')
   <div class="main-panel">
@@ -9,7 +9,7 @@
             <div class="col-lg-12 grid-margin stretch-card" style="width: 100%">
               <div class="card">
                 <div class="card-body">
-                  <h3 class="card-title">Naši radovi</h3>
+                  <h3 class="card-title">Наши радови</h3>
                   <a class="btn btn-info font-weight-bold" href="/admin.nasi_radovi.create">Додај ново обавештење<i class="icon-arrow-right"></i></a>
                   <div class="table-responsive">
                     <table class="table table-striped">
