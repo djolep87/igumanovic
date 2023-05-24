@@ -96,6 +96,7 @@
                                                 <a href="#">За Ђаке</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="/djacki_parlament">Ђачки парламент</a></li>
+                                                    <li><a href="/nasi_radovi">Naši radovi</a></li>
                                                     <li><a href="/zavrsni_ispit">Завршни испит</a></li>
                                                     <li><a href="/upis_u_srednje_skole">Упис у средње школе</a></li>
                                                     <li><a href="/takmicenja">Такмичења</a></li>

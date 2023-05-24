@@ -7,6 +7,7 @@ use App\Models\Drenovci;
 use App\Models\Galerija;
 use App\Models\Letopis;
 use App\Models\Musici;
+use App\Models\NasiRadovi;
 use App\Models\Paramun;
 use App\Models\Pedagog;
 use App\Models\ProjektnaNastava;
@@ -238,6 +239,12 @@ class PagesController extends Controller
     {
         $posts = Takmicenja::orderBy('created_at', 'desc')->get();
         return view('pages.za_djake.takmicenja', compact('posts'));
+    }
+
+    public function nasi_radovi()
+    {
+        $posts = NasiRadovi::orderBy('created_at', 'desc')->get();
+        return view('pages.za_djake.nasi_radovi', compact('posts'));
     }
 
     public function ucenici_generacije()

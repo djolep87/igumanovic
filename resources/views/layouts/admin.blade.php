@@ -63,6 +63,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/admin.nasi_radovi">
+              <i class="icon-pie-graph menu-icon"></i>
+              <span class="menu-title">Naši radovi</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="admin.upis_prvaka">
               <i class="icon-command menu-icon"></i>
               <span class="menu-title">Упис првака</span>

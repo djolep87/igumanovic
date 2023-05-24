@@ -54,6 +54,7 @@ Route::get('/produzeni_boravak', 'PagesController@produzeni_boravak');
 Route::get('/djacki_parlament', 'PagesController@djacki_parlament');
 Route::get('/zavrsni_ispit', 'PagesController@zavrsni_ispit');
 Route::get('/takmicenja', 'PagesController@takmicenja');
+Route::get('/nasi_radovi', 'PagesController@nasi_radovi');
 Route::get('/ucenici_generacije', 'PagesController@ucenici_generacije');
 Route::get('/upis_u_srednje_skole', 'PagesController@upis_u_srednje_skole');
 
@@ -111,6 +112,15 @@ Route::get('/admin.takmicenja.edit/{id}', 'TakmicenjaController@edit');
 Route::put('/admin.takmicenja/{posts}', 'TakmicenjaController@update');
 Route::delete('/admin.takmicenja.destroy/{id}', 'TakmicenjaController@destroy');
 Route::post('/upload', 'TakmicenjaController@uploadImage')->name('upload');
+
+Route::get('/admin.nasi_radovi', 'NasiRadoviController@index');
+Route::get('/admin.nasi_radovi.create', 'NasiRadoviController@create');
+Route::post('/admin.nasi_radovi.store', 'NasiRadoviController@store');
+Route::get('/admin.nasi_radovi.show/{id}', 'NasiRadoviController@show');
+Route::get('/admin.nasi_radovi.edit/{id}', 'NasiRadoviController@edit');
+Route::put('/admin.nasi_radovi/{posts}', 'NasiRadoviController@update');
+Route::delete('/admin.nasi_radovi.destroy/{id}', 'NasiRadoviController@destroy');
+Route::post('/upload', 'NasiRadoviController@uploadImage')->name('upload');
 
 
 Route::get('/admin.upis_prvaka', 'UpisPrvakaController@index');
