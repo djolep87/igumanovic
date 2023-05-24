@@ -15,7 +15,7 @@
                     <div class="breadcrumbs">
                         <ul class="jus-ct">
                             <li><a href="/">Почетна</a></li>
-                            <li><p class="breadcrumbs-inner f-rubik">Naši radovi</p></li>
+                            <li><p class="breadcrumbs-inner  f-rubik">Наши радови</p></li>
                         </ul>
                     </div>
                 </div>
