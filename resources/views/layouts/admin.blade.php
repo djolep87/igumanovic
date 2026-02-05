@@ -57,6 +57,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/admin.obogaceni_kosjeric">
+              <i class="icon-file menu-icon"></i>
+              <span class="menu-title"></span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/admin.takmicenja">
               <i class="icon-pie-graph menu-icon"></i>
               <span class="menu-title">Такмичења</span>

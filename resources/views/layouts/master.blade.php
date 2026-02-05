@@ -86,7 +86,7 @@
                                                             <li><a href="/rasporedisr">Распоред за Сечу Реку</a></li>
                                                         </ul>
                                                     </li>  
-                                                    <li><a href="/jednosmenski">Једносменски обогаћени рад</a></li>         
+                                                    <li><a href="/obogaceni_kosjeric">Обогаћени једносменски рад Косјерић</a></li>         
                                                     <li><a href="/vannastavne">Ваннаставне активности</a></li> 
                                                     <li><a href="/projektna_nastava">Пројектна настава</a></li> 
                                                     <li><a href="/produzeni_boravak">Продужени боравак</a></li>  

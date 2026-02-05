@@ -26,6 +26,7 @@ Route::get('/zaposleni', 'PagesController@zaposleni');
 Route::get('/savet_roditelja', 'PagesController@savet_roditelja');
 Route::get('/biblioteka', 'PagesController@biblioteka');
 Route::get('/letopis', 'PagesController@letopis');
+Route::get('/obogaceni_kosjeric', 'PagesController@obogaceni_kosjeric');
 Route::get('/galerija', 'PagesController@galerija');
 Route::get('/vesti', 'PagesController@vesti');
 Route::get('/seca_reka', 'PagesController@seca_reka');
@@ -102,6 +103,15 @@ Route::get('/admin.vesti.edit/{id}', 'VestiController@edit');
 Route::put('/admin.vesti/{posts}', 'VestiController@update');
 Route::delete('/admin.vesti.destroy/{id}', 'VestiController@destroy');
 Route::post('/upload', 'VestiController@uploadImage')->name('upload');
+
+Route::get('/admin.obogaceni_kosjeric', 'ObogaceniKosjericController@index');
+Route::get('/admin.obogaceni_kosjeric.create', 'ObogaceniKosjericController@create');
+Route::post('/admin.obogaceni_kosjeric.store', 'ObogaceniKosjericController@store');
+Route::get('/admin.obogaceni_kosjeric.show/{id}', 'ObogaceniKosjericController@show');
+Route::get('/admin.obogaceni_kosjeric.edit/{id}', 'ObogaceniKosjericController@edit');
+Route::put('/admin.obogaceni_kosjeric/{posts}', 'ObogaceniKosjericController@update');
+Route::delete('/admin.obogaceni_kosjeric.destroy/{id}', 'ObogaceniKosjericController@destroy');
+Route::post('/upload', 'ObogaceniKosjericController@uploadImage')->name('upload');
 
 
 Route::get('/admin.takmicenja', 'TakmicenjaController@index');

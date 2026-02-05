@@ -8,6 +8,7 @@ use App\Models\Galerija;
 use App\Models\Letopis;
 use App\Models\Musici;
 use App\Models\NasiRadovi;
+use App\Models\ObogaceniKosjeric;
 use App\Models\Paramun;
 use App\Models\Pedagog;
 use App\Models\ProjektnaNastava;
@@ -47,6 +48,12 @@ class PagesController extends Controller
     {
         $posts = Vesti::OrderBy('created_at', 'desc')->get();
         return view('pages.vesti', compact('posts'));
+    }
+
+     public function obogaceni_kosjeric()
+    {
+        $posts = ObogaceniKosjeric::OrderBy('created_at', 'desc')->get();
+        return view('pages.obogaceni_kosjeric', compact('posts'));
     }
 
     public function seca_reka()

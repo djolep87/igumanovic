@@ -28,21 +28,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                @foreach ($posts as $post)
+               @foreach ($posts as $post)
                     <div class="wrap-sc-event">
                     <div class="sc-event-box active fx wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1000ms">
                         <div class="image">
-                           <a href="/admin.vesti.show/{{$post->id}}"><img src="/storage/post_image/{{$post->image}}" alt=""></a> 
+                           <a href="/admin.obogaceni_kosjeric.show/{{$post->id}}"><img src="/storage/post_image/{{$post->image}}" alt=""></a> 
                         </div>
                         <div class="content">
-                            <h3><a href="/admin.vesti.show/{{$post->id}}">{{$post->title}}</a></h3>
+                            <h3><a href="/admin.obogaceni_kosjeric.show/{{$post->id}}">{{$post->title}}</a></h3>
                             <ul>
-                                {{-- <li><span><i class="far fa-map-marker-alt"></i>55 Main Street,2nd Block, 3rd Floor, New York City</span></li> --}}
                                 <li><span><i class="far fa-calendar-alt"></i>{{$post->created_at->toFormattedDateString()}}</span></li>
                             </ul>
                             
                         </div>
-                        <a href="/admin.vesti.show/{{$post->id}}" class="fl-btn st-1">
+                        <a href="/admin.obogaceni_kosjeric.show/{{$post->id}}" class="fl-btn st-1">
                             <span class="inner">Детаљније</span>
                         </a>
                     </div>
