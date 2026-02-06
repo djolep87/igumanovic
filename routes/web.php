@@ -40,6 +40,7 @@ Route::get('/brajkovici', 'PagesController@brajkovici');
 Route::get('/paramun', 'PagesController@paramun');
 Route::get('/radanovci', 'PagesController@radanovci');
 Route::get('/termini', 'PagesController@termini');
+Route::get('/obogaceni_seca_reka', 'PagesController@obogaceni_seca_reka');
 
 Route::get('/kalendar', 'PagesController@kalendar');
 Route::get('/zvono', 'PagesController@zvono');

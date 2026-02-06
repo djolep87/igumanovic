@@ -21,6 +21,52 @@
     <link rel="shortcut icon" href="/assets/images/Favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/assets/images/Favicon.png">
 
+    <style>
+        /* Meni: slova u jednom redu, pozadina do kraja teksta */
+        #mainnav .menu {
+            display: flex;
+            flex-wrap: nowrap;
+            width: max-content;
+        }
+        #mainnav .menu > li {
+            flex: 0 0 auto;
+        }
+        #mainnav .menu > li > a {
+            white-space: nowrap;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .nav-wrap {
+            width: max-content;
+            max-width: 100%;
+        }
+        .nav-wrap .menu .sub-menu li a {
+            white-space: nowrap;
+        }
+        /* Padajući meni: pozadina do kraja slova (bez fiksne 200px širine) */
+        #mainnav .menu > li > .sub-menu {
+            width: max-content !important;
+            min-width: 100%;
+        }
+        #mainnav .menu > li > .sub-menu > li > a {
+            width: 100% !important;
+            padding-right: 20px !important;
+            padding-left: 15px !important;
+            box-sizing: border-box;
+        }
+        #mainnav .menu > li > ul > li .sub-menu {
+            width: max-content !important;
+            min-width: 100%;
+        }
+        #mainnav .menu > li > ul.sub-menu > li > ul li a,
+        #mainnav .menu > li > ul > li .sub-menu > li > a {
+            width: 100% !important;
+            padding-right: 20px !important;
+            padding-left: 15px !important;
+            box-sizing: border-box;
+        }
+    </style>
+
 </head>
 <body class="counter-scroll header-fixed home2">
     <div id="wrapper">
@@ -87,6 +133,7 @@
                                                         </ul>
                                                     </li>  
                                                     <li><a href="/obogaceni_kosjeric">Обогаћени једносменски рад Косјерић</a></li>         
+                                                    <li><a href="/obogaceni_seca_reka">Обогаћени једносменски рад Сеча Река</a></li>         
                                                     <li><a href="/vannastavne">Ваннаставне активности</a></li> 
                                                     <li><a href="/projektna_nastava">Пројектна настава</a></li> 
                                                     <li><a href="/produzeni_boravak">Продужени боравак</a></li>  

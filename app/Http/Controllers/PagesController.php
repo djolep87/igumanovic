@@ -56,6 +56,12 @@ class PagesController extends Controller
         return view('pages.obogaceni_kosjeric', compact('posts'));
     }
 
+    public function obogaceni_seca_reka()
+    {
+        $posts = SecaReka::OrderBy('created_at', 'desc')->get();
+        return view('pages.organizacija_rada.obogaceni_seca_reka', compact('posts'));
+    }
+
     public function seca_reka()
     {
         $posts = SecaReka::OrderBy('created_at', 'desc')->get();
