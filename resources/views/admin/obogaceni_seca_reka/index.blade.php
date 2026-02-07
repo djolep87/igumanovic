@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Админ панел - Oбогаћени једносменски рад Косјерић')
+@section('title', 'Админ панел - Oбогаћени једносменски рад Сеча Река')
 
 @section('content')
   <div class="main-panel">
@@ -9,8 +9,8 @@
             <div class="col-lg-12 grid-margin stretch-card" >
               <div class="card">
                 <div class="card-body">
-                  <h3 class="card-title">Обогаћени једносменски рад Косјерић</h3>
-                  <a class="btn btn-info font-weight-bold" href="/admin.obogaceni_kosjeric.create">Додај нови post<i class="icon-arrow-right"></i></a>
+                  <h3 class="card-title">Обогаћени једносменски рад Сеча Река</h3>
+                  <a class="btn btn-info font-weight-bold" href="/admin.obogaceni_seca_reka.create">Додај нови post<i class="icon-arrow-right"></i></a>
                   <div class="table-responsive">
                     <table class="table table-striped">
                         <tr>
@@ -49,9 +49,9 @@
                             {{$post->created_at->toFormattedDateString()}}
                             </td>
                             <td>
-                             <a href="/admin.obogaceni_kosjeric.show/{{$post->id}}"><i class="fa fa-eye" style="font-size:20px"></i></a>
-                             <a href="/admin.obogaceni_kosjeric.edit/{{$post->id}}"><i class="fa fa-edit" style="font-size:18px" ></i></a>
-                             <form action="/admin.obogaceni_kosjeric.destroy/{{ $post->id }}" id="myform" method="POST">
+                             <a href="/admin.obogaceni_seca_reka.show/{{$post->id}}"><i class="fa fa-eye" style="font-size:20px"></i></a>
+                             <a href="/admin.obogaceni_seca_reka.edit/{{$post->id}}"><i class="fa fa-edit" style="font-size:18px" ></i></a>
+                             <form action="/admin.obogaceni_seca_reka.destroy/{{ $post->id }}" id="myform" method="POST">
                               @csrf
                               @method('DELETE')
                               {{-- <input type="submit" class="fa fa-trash"  value="" style="border:none;" > --}}

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateObogaceniSrsTable extends Migration
+class AddImageToObogaceniSecaRekasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateObogaceniSrsTable extends Migration
      */
     public function up()
     {
-        Schema::create('obogaceni_srs', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->longText('body');
-            $table->timestamps();
+        Schema::table('obogaceni_seca_rekas', function (Blueprint $table) {
+            $table->string('image')->after('title');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateObogaceniSrsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('obogaceni_srs');
+        Schema::table('obogaceni_seca_rekas', function (Blueprint $table) {
+            //
+        });
     }
 }

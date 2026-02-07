@@ -9,6 +9,7 @@ use App\Models\Letopis;
 use App\Models\Musici;
 use App\Models\NasiRadovi;
 use App\Models\ObogaceniKosjeric;
+use App\Models\ObogaceniSecaReka;
 use App\Models\Paramun;
 use App\Models\Pedagog;
 use App\Models\ProjektnaNastava;
@@ -58,7 +59,7 @@ class PagesController extends Controller
 
     public function obogaceni_seca_reka()
     {
-        $posts = SecaReka::OrderBy('created_at', 'desc')->get();
+        $posts = ObogaceniSecaReka::OrderBy('created_at', 'desc')->get();
         return view('pages.organizacija_rada.obogaceni_seca_reka', compact('posts'));
     }
 

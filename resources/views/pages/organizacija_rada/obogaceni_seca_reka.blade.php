@@ -32,10 +32,10 @@
                     <div class="wrap-sc-event">
                     <div class="sc-event-box active fx wow fadeIn animated" data-wow-delay="0.3ms" data-wow-duration="1000ms">
                         <div class="image">
-                           <a href="/admin.vesti.show/{{$post->id}}"><img src="/storage/post_image/{{$post->image}}" alt=""></a> 
+                           <a href="/admin.obogaceni_seca_reka.show/{{$post->id}}"><img src="/storage/post_image/{{$post->image}}" alt=""></a> 
                         </div>
                         <div class="content">
-                            <h3><a href="/admin.vesti.show/{{$post->id}}">{{$post->title}}</a></h3>
+                            <h3><a href="/admin.obogaceni_seca_reka.show/{{$post->id}}">{{$post->title}}</a></h3>
                             <ul>
                                 {{-- <li><span><i class="far fa-map-marker-alt"></i>55 Main Street,2nd Block, 3rd Floor, New York City</span></li> --}}
                                 <li><span><i class="far fa-calendar-alt"></i>{{$post->created_at->toFormattedDateString()}}</span></li>

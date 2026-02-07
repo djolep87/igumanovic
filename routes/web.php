@@ -114,6 +114,15 @@ Route::put('/admin.obogaceni_kosjeric/{posts}', 'ObogaceniKosjericController@upd
 Route::delete('/admin.obogaceni_kosjeric.destroy/{id}', 'ObogaceniKosjericController@destroy');
 Route::post('/upload', 'ObogaceniKosjericController@uploadImage')->name('upload');
 
+Route::get('/admin.obogaceni_seca_reka', 'ObogaceniSecaRekaController@index');
+Route::get('/admin.obogaceni_seca_reka.create', 'ObogaceniSecaRekaController@create');
+Route::post('/admin.obogaceni_seca_reka.store', 'ObogaceniSecaRekaController@store');
+Route::get('/admin.obogaceni_seca_reka.show/{id}', 'ObogaceniSecaRekaController@show');
+Route::get('/admin.obogaceni_seca_reka.edit/{id}', 'ObogaceniSecaRekaController@edit');
+Route::put('/admin.obogaceni_seca_reka/{posts}', 'ObogaceniSecaRekaController@update');
+Route::delete('/admin.obogaceni_seca_reka.destroy/{id}', 'ObogaceniSecaRekaController@destroy');
+Route::post('/upload', 'ObogaceniSecaRekaController@uploadImage')->name('upload');
+
 
 Route::get('/admin.takmicenja', 'TakmicenjaController@index');
 Route::get('/admin.takmicenja.create', 'TakmicenjaController@create');

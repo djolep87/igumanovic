@@ -63,6 +63,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/admin.obogaceni_seca_reka">
+              <i class="icon-file menu-icon"></i>
+              <span class="menu-title">Обогаћени Сеча река</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/admin.takmicenja">
               <i class="icon-pie-graph menu-icon"></i>
               <span class="menu-title">Такмичења</span>
