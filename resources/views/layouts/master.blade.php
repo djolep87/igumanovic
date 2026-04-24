@@ -137,6 +137,7 @@
                                                     <li><a href="/vannastavne">Ваннаставне активности</a></li> 
                                                     <li><a href="/projektna_nastava">Пројектна настава</a></li> 
                                                     <li><a href="/produzeni_boravak">Продужени боравак</a></li>  
+                                                    <li><a href="/erazmus">Erazmus - Корак више</a></li>  
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children {{ request()->is('students') ? 'current-menu-item' : '' }}">

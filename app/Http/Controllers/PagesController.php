@@ -6,6 +6,7 @@ use App\Models\Brajkovici;
 use App\Models\Drenovci;
 use App\Models\Galerija;
 use App\Models\Letopis;
+use App\Models\Erazmus;
 use App\Models\Musici;
 use App\Models\NasiRadovi;
 use App\Models\ObogaceniKosjeric;
@@ -49,6 +50,12 @@ class PagesController extends Controller
     {
         $posts = Vesti::OrderBy('created_at', 'desc')->get();
         return view('pages.vesti', compact('posts'));
+    }
+
+    public function erazmus()
+    {
+        $posts = Erazmus::OrderBy('created_at', 'desc')->get();
+        return view('pages.organizacija_rada.erazmus', compact('posts'));
     }
 
      public function obogaceni_kosjeric()

@@ -51,6 +51,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/admin.erazmus">
+              <i class="icon-box menu-icon"></i>
+              <span class="menu-title">Erazmus - Корак више</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/admin.vesti">
               <i class="icon-file menu-icon"></i>
               <span class="menu-title">Вести</span>

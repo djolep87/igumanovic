@@ -29,6 +29,7 @@ Route::get('/letopis', 'PagesController@letopis');
 Route::get('/obogaceni_kosjeric', 'PagesController@obogaceni_kosjeric');
 Route::get('/galerija', 'PagesController@galerija');
 Route::get('/vesti', 'PagesController@vesti');
+Route::get('/erazmus', 'PagesController@erazmus');
 Route::get('/seca_reka', 'PagesController@seca_reka');
 Route::get('/razana', 'PagesController@razana');
 Route::get('/drenovci', 'PagesController@drenovci');
@@ -104,6 +105,15 @@ Route::get('/admin.vesti.edit/{id}', 'VestiController@edit');
 Route::put('/admin.vesti/{posts}', 'VestiController@update');
 Route::delete('/admin.vesti.destroy/{id}', 'VestiController@destroy');
 Route::post('/upload', 'VestiController@uploadImage')->name('upload');
+
+Route::get('/admin.erazmus', 'ErazmusController@index');
+Route::get('/admin.erazmus.create', 'ErazmusController@create');
+Route::post('/admin.erazmus.store', 'ErazmusController@store');
+Route::get('/admin.erazmus.show/{id}', 'ErazmusController@show');
+Route::get('/admin.erazmus.edit/{id}', 'ErazmusController@edit');
+Route::put('/admin.erazmus/{posts}', 'ErazmusController@update');
+Route::delete('/admin.erazmus.destroy/{id}', 'ErazmusController@destroy');
+Route::post('/upload', 'ErazmusController@uploadImage')->name('upload');
 
 Route::get('/admin.obogaceni_kosjeric', 'ObogaceniKosjericController@index');
 Route::get('/admin.obogaceni_kosjeric.create', 'ObogaceniKosjericController@create');
