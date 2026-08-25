@@ -42,7 +42,7 @@
                             </ul>
                             
                         </div>
-                        <a href="/admin.vesti.show/{{$post->id}}" class="fl-btn st-1">
+                        <a href="/admin.obogaceni_seca_reka.show/{{$post->id}}" class="fl-btn st-1">
                             <span class="inner">Детаљније</span>
                         </a>
                     </div>
