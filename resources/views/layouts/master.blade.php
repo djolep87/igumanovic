@@ -22,48 +22,93 @@
     <link rel="apple-touch-icon-precomposed" href="/assets/images/Favicon.png">
 
     <style>
-        /* Meni: slova u jednom redu, pozadina do kraja teksta */
-        #mainnav .menu {
-            display: flex;
-            flex-wrap: nowrap;
-            width: max-content;
+        /* Ova pravila važe samo za desktop/tablet prikaz (iznad praga na kom se
+           aktivira hamburger meni u main.js -> mobileNav(), 991px). Meni je
+           namerno podeljen u 2 fiksna reda (ne zavisi od širine ekrana):
+           prvih 6 stavki u prvom redu, "Документа/Летопис/Контакт" uvek u
+           drugom redu, centrirano - .menu-break element to forsira. */
+        .menu-break {
+            display: none;
         }
-        #mainnav .menu > li {
-            flex: 0 0 auto;
-        }
-        #mainnav .menu > li > a {
-            white-space: nowrap;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .nav-wrap {
-            width: max-content;
-            max-width: 100%;
-        }
-        .nav-wrap .menu .sub-menu li a {
-            white-space: nowrap;
-        }
-        /* Padajući meni: pozadina do kraja slova (bez fiksne 200px širine) */
-        #mainnav .menu > li > .sub-menu {
-            width: max-content !important;
-            min-width: 100%;
-        }
-        #mainnav .menu > li > .sub-menu > li > a {
-            width: 100% !important;
-            padding-right: 20px !important;
-            padding-left: 15px !important;
-            box-sizing: border-box;
-        }
-        #mainnav .menu > li > ul > li .sub-menu {
-            width: max-content !important;
-            min-width: 100%;
-        }
-        #mainnav .menu > li > ul.sub-menu > li > ul li a,
-        #mainnav .menu > li > ul > li .sub-menu > li > a {
-            width: 100% !important;
-            padding-right: 20px !important;
-            padding-left: 15px !important;
-            box-sizing: border-box;
+        @media (min-width: 992px) {
+            .site-header-inner {
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                padding: 12px 0;
+            }
+            #site-logo {
+                flex: 0 0 auto;
+                line-height: 0;
+            }
+            /* Meni više nije apsolutno pozicioniran na fiksnih 18.7% - sad je
+               deo normalnog flex toka pa header sam raste u visinu kad se
+               meni prelomi u drugi red. Selektor mora da ponovi .home2/.inner-page
+               prefiks iz style.css jer inače manja specifičnost gubi od teme. */
+            .home2 .nav-wrap,
+            .inner-page .nav-wrap {
+                position: static;
+                transform: none;
+                width: auto;
+                max-width: none;
+                flex: 1 1 auto;
+                min-width: 0;
+                margin-left: 40px;
+            }
+            #mainnav {
+                width: 100%;
+            }
+            #mainnav .menu {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                row-gap: 4px;
+                width: 100%;
+                margin: 0;
+            }
+            #mainnav .menu > li {
+                flex: 0 0 auto;
+            }
+            #mainnav .menu > li > a {
+                white-space: nowrap;
+                padding: 10px 15px;
+                line-height: 1.2;
+            }
+            /* Prisiljava prelom reda tačno posle "За родитеље", bez obzira na
+               širinu ekrana - "Документа/Летопис/Контакт" uvek idu u red 2. */
+            .menu-break {
+                display: block;
+                flex-basis: 100%;
+                width: 0;
+                height: 0;
+                margin: 0;
+                padding: 0;
+            }
+            .nav-wrap .menu .sub-menu li a {
+                white-space: nowrap;
+            }
+            /* Padajući meni: pozadina do kraja slova (bez fiksne 200px širine) */
+            #mainnav .menu > li > .sub-menu {
+                width: max-content !important;
+                min-width: 100%;
+            }
+            #mainnav .menu > li > .sub-menu > li > a {
+                width: 100% !important;
+                padding-right: 20px !important;
+                padding-left: 15px !important;
+                box-sizing: border-box;
+            }
+            #mainnav .menu > li > ul > li .sub-menu {
+                width: max-content !important;
+                min-width: 100%;
+            }
+            #mainnav .menu > li > ul.sub-menu > li > ul li a,
+            #mainnav .menu > li > ul > li .sub-menu > li > a {
+                width: 100% !important;
+                padding-right: 20px !important;
+                padding-left: 15px !important;
+                box-sizing: border-box;
+            }
         }
     </style>
 
@@ -172,6 +217,7 @@
                                                     <li><a href="/pedagog_savetuje">Педагог саветује</a></li>
                                                 </ul>
                                             </li>
+                                            <li class="menu-break" aria-hidden="true"></li>
                                             <li class="menu-item-has-children {{ request()->is('about') ? 'current-menu-item' : '' }}">
                                                 <a href="#">Документа</a>
                                                 <ul class="sub-menu">
