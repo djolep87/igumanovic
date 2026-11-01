@@ -1,0 +1,95 @@
+/* Lista postova (vesti i ostale stranice sa postovima)
+   Upotreba: dodati klasu .posts-list na <section> koja sadrži
+   .wrap-sc-event > .sc-event-box elemente.
+
+   Tema (responsive.css) ispod 991px fiksira .sc-event-box na 940px i
+   stavlja horizontalni skrol na .wrap-sc-event - ovde to poništavamo
+   i pretvaramo post u karticu koja se prilagođava širini ekrana.
+-------------------------------------------------------------- */
+.posts-list .wrap-sc-event {
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+}
+.posts-list .sc-event-box {
+    width: auto;
+    border-radius: 10px;
+}
+.posts-list .sc-event-box .image {
+    flex: 0 0 auto;
+    width: auto;
+}
+.posts-list .sc-event-box .content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.posts-list .sc-event-box .content h3 {
+    overflow-wrap: anywhere;
+}
+.posts-list .sc-event-box .fl-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 991px) {
+    .posts-list .sc-event-box {
+        margin: 0 0 30px 0;
+        padding: 25px;
+    }
+    .posts-list .sc-event-box .image img {
+        width: 160px;
+        height: 130px;
+    }
+    .posts-list .sc-event-box .content {
+        padding-left: 25px;
+        margin-right: 20px;
+    }
+    .posts-list .sc-event-box .content h3 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .posts-list .sc-event-box .fl-btn.st-1 {
+        height: 50px;
+        font-size: 16px;
+        padding-left: 22px;
+        padding-right: 55px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .posts-list .sc-event-box {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        overflow: hidden;
+    }
+    .posts-list .sc-event-box:hover {
+        transform: translateY(-5px);
+    }
+    .posts-list .sc-event-box .image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border-radius: 0;
+    }
+    .posts-list .sc-event-box .content {
+        border-left: none;
+        padding: 20px 20px 0;
+        margin: 0;
+    }
+    .posts-list .sc-event-box .content h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 6px;
+    }
+    .posts-list .sc-event-box .content ul li:last-child span {
+        margin-right: 0;
+    }
+    .posts-list .sc-event-box .fl-btn.st-1 {
+        margin: 15px 20px 20px;
+        max-width: none;
+        justify-content: center;
+        padding-right: 50px;
+    }
+}

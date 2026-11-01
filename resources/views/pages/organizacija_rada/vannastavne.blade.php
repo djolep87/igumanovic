@@ -30,7 +30,7 @@
     </div>    
 </section>
 
-<section class="tf-section tf-blog-list">
+<section class="tf-section tf-blog-list posts-list">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

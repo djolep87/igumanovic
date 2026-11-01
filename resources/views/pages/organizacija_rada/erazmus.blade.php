@@ -47,7 +47,7 @@
     </div>    
 </section>
 
-<section class="tf-section tf-event">
+<section class="tf-section tf-event posts-list">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

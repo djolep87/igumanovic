@@ -15,7 +15,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
     <!-- Reponsive -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">       
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+    <!-- Lista postova -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/posts.css">
 
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="/assets/images/Favicon.png">
